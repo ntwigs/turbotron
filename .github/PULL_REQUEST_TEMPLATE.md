@@ -1,6 +1,7 @@
 <!--
   Thank you for filing a pull request! 🥰
   Please make sure that the issue/bug have not been filed already. 🙏
+  Remember - Turbotron is supposed to be as small as possible.
 -->
 
 # ↪️ Pull Request
@@ -24,6 +25,6 @@
 ## ✔️ PR Todo
 
 - [ ] Included links to related issues/PRs
-- [x] Feeling great that you just contributed to turbotron 🥰
+- [x] Feeling great that you just contributed to Turbotron 🥰
 
-<!-- Thank you so much for contributing to turbotron. 🥰 -->
+<!-- Thank you so much for contributing to Turbotron. 🥰 -->
