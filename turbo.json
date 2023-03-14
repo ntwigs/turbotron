@@ -8,16 +8,12 @@
     "dev": {
       "cache": false
     },
-    "web#build": {
-      "cache": false
-    },
+    "web#build": {},
     "client#build": {
-      "dependsOn": ["^web#build"],
-      "cache": false
+      "dependsOn": ["^web#build"]
     },
     "build": {
-      "dependsOn": ["^client#build"],
-      "cache": false
+      "dependsOn": ["^client#build"]
     }
   }
 }
