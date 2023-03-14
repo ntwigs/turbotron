@@ -6,13 +6,15 @@
     "apps/*",
     "packages/*"
   ],
+  "prettier": "@goatee/prettier",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,jsx}\""
   },
   "devDependencies": {
+    "@goatee/prettier": "^0.0.4",
     "eslint-config-custom": "*",
     "prettier": "latest",
     "turbo": "latest"
