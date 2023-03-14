@@ -24,7 +24,7 @@ When running the build script from the root this will be done automatically.
 To start the web section of the project in dev mode manually you can do the following:
 1. `yarn dev`
 2. ...
-3. The desktop project should now have opened a Electron app
+3. The desktop project should now have opened an Electron app
 
 ### Prod
 

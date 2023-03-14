@@ -13,7 +13,7 @@
 
 ## What is this for? 🍻
 
-This is where the magic happens. After the build has been completed for Electron (client) and the React (web) - the builder copies their dists and uses electron-builder to produce the end result.
+This is where the magic happens. After the build has been completed for Electron (client) and React (web) - the builder copies their dists and uses electron-builder to produce the end result.
 
 ## Structure? 🤲
 
