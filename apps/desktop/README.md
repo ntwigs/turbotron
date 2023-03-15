@@ -31,7 +31,7 @@ To start the web section of the project in dev mode manually you can do the foll
 To build for prod manually you can do the following:
 1. `yarn build`
 2. ...
-3. The client folder should now contain a `dist` folder if everything went as expected.
+3. The desktop folder should now contain a `dist` folder if everything went as expected.
 
 
 </br></br>

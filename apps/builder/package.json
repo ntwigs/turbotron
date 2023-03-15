@@ -4,7 +4,7 @@
   "main": "dist-client/main/index.js",
   "license": "MIT",
   "scripts": {
-    "copy-client": "rm -rf dist-client && cp -R ../client/dist dist-client",
+    "copy-client": "rm -rf dist-desktop && cp -R ../client/dist dist-desktop",
     "copy-web": "rm -rf dist-web && cp -R ../web/dist dist-web",
     "copy": "yarn copy-client && yarn copy-web",
     "clear": "rm -rf dist",
