@@ -9,11 +9,11 @@
       "cache": false
     },
     "web#build": {},
-    "client#build": {
+    "desktop#build": {
       "dependsOn": ["^web#build"]
     },
     "build": {
-      "dependsOn": ["^client#build"]
+      "dependsOn": ["^desktop#build"]
     }
   }
 }

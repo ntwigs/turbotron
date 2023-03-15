@@ -1,20 +1,20 @@
 {
   "name": "builder",
   "version": "1.0.0",
-  "main": "dist-client/main/index.js",
+  "main": "dist-desktop/main/index.js",
   "license": "MIT",
   "scripts": {
-    "copy-client": "rm -rf dist-desktop && cp -R ../client/dist dist-desktop",
+    "copy-desktop": "rm -rf dist-desktop && cp -R ../desktop/dist dist-desktop",
     "copy-web": "rm -rf dist-web && cp -R ../web/dist dist-web",
-    "copy": "yarn copy-client && yarn copy-web",
+    "copy": "yarn copy-desktop && yarn copy-web",
     "clear": "rm -rf dist",
     "build": "yarn copy && yarn clear && electron-builder"
   },
   "build": {
-    "appId": "your.id",
+    "appId": "turbotron",
     "files": {
       "filter": [
-        "./dist-client/**/*",
+        "./dist-desktop/**/*",
         "./dist-web/**/*"
       ]
     },
