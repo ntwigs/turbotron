@@ -1,19 +1,29 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
+  "globalDependencies": [
+    "**/.env.*local"
+  ],
+  "tasks": {
     "lint": {
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "passThroughEnv": [
+        "DISPLAY",
+        "DBUS_SESSION_BUS_ADDRESS"
+      ]
     },
     "web#build": {},
     "desktop#build": {
-      "dependsOn": ["^web#build"]
+      "dependsOn": [
+        "^web#build"
+      ]
     },
     "build": {
-      "dependsOn": ["^desktop#build"]
+      "dependsOn": [
+        "^desktop#build"
+      ]
     }
   }
 }
