@@ -1,57 +1,58 @@
-process.env.NODE_ENV = process.argv.includes('--dev')
-  ? 'development'
-  : 'production'
-
 import { build, startup } from 'vite-plugin-electron'
 
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = process.env.NODE_ENV === 'production'
+const ENV_DEVELOPMENT = 'development'
+const ENV_PRODUCTION = 'production'
 
-build({
-  entry: 'src/preload/index.ts',
-  vite: {
-    mode: process.env.NODE_ENV,
-    build: {
-      outDir: 'dist/preload',
-      minify: isProd,
-      watch: isDev ? {} : null,
-      lib: {
-        fileName: () => '[name].mjs',
-      },
-    },
-    plugins: [
-      {
-        name: 'plugin-start-electron',
-        closeBundle() {
-          if (isDev) {
-            // Startup Electron App
-            startup()
-          }
+const environment = process.argv.includes('--dev')
+  ? ENV_DEVELOPMENT
+  : ENV_PRODUCTION
+
+const isDev = environment === ENV_DEVELOPMENT
+const isProd = environment === ENV_PRODUCTION
+
+const reloadElectronPlugin = {
+  name: 'plugin-reload-electron',
+  closeBundle() {
+    if (isDev) {
+      startup()
+    }
+  },
+}
+
+const getBuildConfig = (outDir) => {
+  return {
+    outDir,
+    minify: isProd,
+    watch: isDev ? {} : null,
+  }
+}
+
+const buildPreload = () => {
+  build({
+    entry: 'src/preload/index.ts',
+    vite: {
+      mode: process.env.NODE_ENV,
+      build: {
+        ...getBuildConfig('dist/preload'),
+        lib: {
+          fileName: () => '[name].mjs',
         },
       },
-    ],
-  },
-})
-
-build({
-  entry: 'src/main/index.ts',
-  vite: {
-    mode: process.env.NODE_ENV,
-    build: {
-      outDir: 'dist/main',
-      minify: isProd,
-      watch: isDev ? {} : null,
+      plugins: [reloadElectronPlugin],
     },
-    plugins: [
-      {
-        name: 'plugin-start-electron',
-        closeBundle() {
-          if (isDev) {
-            // Startup Electron App
-            startup()
-          }
-        },
-      },
-    ],
-  },
-})
+  }).catch((error) => console.error(`PRELOAD ERROR:\n${error}\n`))
+}
+
+const buildMain = () => {
+  build({
+    entry: 'src/main/index.ts',
+    vite: {
+      mode: process.env.NODE_ENV,
+      build: getBuildConfig('dist/main'),
+      plugins: [reloadElectronPlugin],
+    },
+  }).catch((error) => console.error(`MAIN ERROR:\n${error}\n`))
+}
+
+buildPreload()
+buildMain()
