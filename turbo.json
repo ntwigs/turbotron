@@ -18,17 +18,13 @@
       ],
       "persistent": true
     },
-    "web#build": {
-      "cache": false
-    },
+    "web#build": {},
     "desktop#build": {
-      "cache": false,
       "dependsOn": [
         "web#build"
       ]
     },
     "build": {
-      "cache": false,
       "dependsOn": [
         "desktop#build"
       ]
