@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node build.mjs --dev",
-    "build": "node build.mjs"
+    "build": "tsc -b && node build.mjs"
   },
   "devDependencies": {
     "electron": "31.3.1",
@@ -14,8 +14,7 @@
     "tsconfig": "*",
     "typescript": "5.5.4",
     "vite": "5.4.0",
-    "vite-plugin-electron": "0.28.1",
-    "vite-plugin-electron-renderer": "^0.14.5"
+    "vite-plugin-electron": "0.28.1"
   },
   "dependencies": {
     "electron-is-dev": "3.0.1"
