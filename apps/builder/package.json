@@ -5,11 +5,12 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "copy-desktop": "rm -rf dist-desktop && cp -R ../desktop/dist dist-desktop",
-    "copy-web": "rm -rf dist-web && cp -R ../web/dist dist-web",
+    "build": "yarn pre-clean && yarn copy && electron-builder && yarn post-clean",
+    "pre-clean": "yarn post-clean && shx rm -rf dist",
+    "post-clean": "shx rm -rf dist-desktop && shx rm -rf dist-web",
     "copy": "yarn copy-desktop && yarn copy-web",
-    "clear": "rm -rf dist",
-    "build": "yarn copy && yarn clear && electron-builder"
+    "copy-desktop": "shx cp -R ../desktop/dist dist-desktop",
+    "copy-web": "shx cp -R ../web/dist dist-web"
   },
   "build": {
     "appId": "turbotron",
@@ -32,6 +33,7 @@
     "electronVersion": "31.3.1"
   },
   "devDependencies": {
-    "electron-builder": "24.13.3"
+    "electron-builder": "24.13.3",
+    "shx": "^0.3.4"
   }
 }
