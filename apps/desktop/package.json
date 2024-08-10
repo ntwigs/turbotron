@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node build.mjs --dev",
-    "build": "tsc -b && node build.mjs"
+    "build": "tsc && node build.mjs"
   },
   "devDependencies": {
     "electron": "31.3.1",
