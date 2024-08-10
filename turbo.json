@@ -1,5 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalEnv": [
+    "DISPLAY",
+    "DBUS_SESSION_BUS_ADDRESS"
+  ],
   "globalDependencies": [
     "**/.env.*local"
   ],
@@ -9,20 +13,24 @@
     },
     "dev": {
       "cache": false,
-      "passThroughEnv": [
-        "DISPLAY",
-        "DBUS_SESSION_BUS_ADDRESS"
-      ]
+      "env": [
+        "VITE_*"
+      ],
+      "persistent": true
     },
-    "web#build": {},
+    "web#build": {
+      "cache": false
+    },
     "desktop#build": {
+      "cache": false,
       "dependsOn": [
-        "^web#build"
+        "web#build"
       ]
     },
     "build": {
+      "cache": false,
       "dependsOn": [
-        "^desktop#build"
+        "desktop#build"
       ]
     }
   }

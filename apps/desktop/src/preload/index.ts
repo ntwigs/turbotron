@@ -1,5 +1,1 @@
-;(() => {
-  console.log('PRELOADING...')
-})()
-
-export {}
+console.log('PRELOADING...')

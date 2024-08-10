@@ -2,6 +2,7 @@
   "name": "builder",
   "version": "1.0.0",
   "main": "dist-desktop/main/index.js",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "copy-desktop": "rm -rf dist-desktop && cp -R ../desktop/dist dist-desktop",
