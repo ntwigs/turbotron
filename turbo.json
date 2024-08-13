@@ -9,6 +9,7 @@
   ],
   "tasks": {
     "lint": {
+      "cache": false,
       "outputs": []
     },
     "dev": {

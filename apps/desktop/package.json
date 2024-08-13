@@ -6,15 +6,18 @@
   "type": "module",
   "scripts": {
     "dev": "node build.mjs --dev",
-    "build": "tsc && node build.mjs"
+    "build": "tsc && node build.mjs",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "electron": "31.3.1",
-    "tree-kill": "^1.2.2",
+    "eslint": "9.9.0",
+    "tree-kill": "1.2.2",
     "tsconfig": "*",
     "typescript": "5.5.4",
     "vite": "5.4.0",
-    "vite-plugin-electron": "0.28.1"
+    "vite-plugin-electron": "0.28.1",
+    "eslint-config-turbotron": "*"
   },
   "dependencies": {
     "electron-is-dev": "3.0.1"

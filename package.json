@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "@goatee/prettier": "^0.0.4",
-    "eslint-config-custom": "*",
     "prettier": "latest",
     "turbo": "2.0.12"
   },

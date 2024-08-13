@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "18.3.1",
@@ -16,6 +17,8 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@vitejs/plugin-react-swc": "3.7.0",
+    "eslint-config-turbotron": "*",
+    "eslint": "9.9.0",
     "tsconfig": "*",
     "typescript": "5.5.4",
     "vite": "5.4.0"
