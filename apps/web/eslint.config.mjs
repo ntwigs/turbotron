@@ -1,3 +1,3 @@
-import config from 'eslint-config-turbotron'
+import config from 'eslint-config-turbotron/web.eslint.mjs'
 
 export default [...config]

@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node build.mjs --dev",
     "build": "tsc && node build.mjs",
-    "lint": "eslint ."
+    "lint": "eslint ./src ./build.mjs"
   },
   "devDependencies": {
     "electron": "31.3.1",
