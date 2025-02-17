@@ -5,10 +5,10 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "yarn pre-clean && yarn copy && electron-builder && yarn post-clean",
-    "pre-clean": "yarn post-clean && shx rm -rf dist",
+    "build": "pnpm pre-clean && pnpm copy && electron-builder && pnpm post-clean",
+    "pre-clean": "pnpm post-clean && shx rm -rf dist",
     "post-clean": "shx rm -rf dist-desktop && shx rm -rf dist-web",
-    "copy": "yarn copy-desktop && yarn copy-web",
+    "copy": "pnpm copy-desktop && pnpm copy-web",
     "copy-desktop": "shx cp -R ../desktop/dist dist-desktop",
     "copy-web": "shx cp -R ../web/dist dist-web"
   },

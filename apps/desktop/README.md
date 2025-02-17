@@ -22,14 +22,14 @@ When running the build script from the root this will be done automatically.
 ### Dev
 
 To start the web section of the project in dev mode manually you can do the following:
-1. `yarn dev`
+1. `pnpm dev`
 2. ...
 3. The desktop project should now have opened an Electron app
 
 ### Prod
 
 To build for prod manually you can do the following:
-1. `yarn build`
+1. `pnpm build`
 2. ...
 3. The desktop folder should now contain a `dist` folder if everything went as expected.
 

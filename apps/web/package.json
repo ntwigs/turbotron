@@ -17,9 +17,9 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@vitejs/plugin-react-swc": "3.7.0",
-    "eslint-config-turbotron": "*",
+    "eslint-config-turbotron": "workspace:*",
     "eslint": "9.9.0",
-    "tsconfig": "*",
+    "tsconfig": "workspace:*",
     "typescript": "5.5.4",
     "vite": "5.4.0"
   }
