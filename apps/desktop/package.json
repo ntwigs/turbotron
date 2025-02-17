@@ -10,10 +10,9 @@
     "lint": "eslint ./src ./build.mjs"
   },
   "devDependencies": {
-    "electron": "31.3.1",
+    "electron": "34.2.0",
     "eslint": "9.9.0",
     "tree-kill": "1.2.2",
-    "tsconfig": "workspace:*",
     "typescript": "5.5.4",
     "vite": "5.4.0",
     "vite-plugin-electron": "0.28.1",
