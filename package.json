@@ -17,11 +17,10 @@
   "devDependencies": {
     "@goatee/prettier": "^0.0.4",
     "prettier": "latest",
-    "turbo": "2.0.12"
+    "turbo": "2.4.2"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@10.4.1"
 }
